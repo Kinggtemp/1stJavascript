@@ -147,77 +147,156 @@
 
 // make sure function is the name of what it is going to do
 //also comment in what you're doing so future you knows whats going on
-function sayHello(firstName, lastName){
-    console.log('hello' + firstName + "" + lastName);
-}
-
-// sayHello(" Alex", "Oliver");
-// sayHello(" Zack", "Todd");
-
-let nickName = createMessage("Nick", "Todd");
-let zackName = createMessage("Zack", "Todd");
-let alexName = createMessage("Alex", "Oliver");
-
-console.log(nickName);
-console.log(zackName);
-console.log(alexName);
-
-// function createMessage(firstName, lastName) {
-//     return "hello " + firstName + " " + lastName;
+// function sayHello(firstName, lastName){
+//     console.log('hello' + firstName + "" + lastName);
 // }
 
-//parameters and local variables are only in the scope inside the function 
-// let variables are stored in the whole file
-let age = 21;
-function sayHello(firstName, lastName){
-    console.log('hello' + firstName + " " + lastName + " you are " + age + " years old");
+// // sayHello(" Alex", "Oliver");
+// // sayHello(" Zack", "Todd");
+
+// let nickName = createMessage("Nick", "Todd");
+// let zackName = createMessage("Zack", "Todd");
+// let alexName = createMessage("Alex", "Oliver");
+
+// console.log(nickName);
+// console.log(zackName);
+// console.log(alexName);
+
+// // function createMessage(firstName, lastName) {
+// //     return "hello " + firstName + " " + lastName;
+// // }
+
+// //parameters and local variables are only in the scope inside the function 
+// // let variables are stored in the whole file
+// let age = 21;
+// function sayHello(firstName, lastName){
+//     console.log('hello' + firstName + " " + lastName + " you are " + age + " years old");
+// }
+
+// console.log (i);
+// let height = 1.4;
+// console.log("hello " + firstName + " you are " + age + " years old and you are " + height + "m tall");
+
+// // global scope - can see it everywhere
+// // parameters and local variables are only in scope inside the function
+// function sayHello(firstName="Nick", lastName="Todd")
+//     // var is a locally scoped variable visible to the entire function, even if declared in
+//     // a block such as a for loop
+//     for (var i = 0; i < 5; i++) {
+//         console.log(i);
+//         var height = 1.4;
+//     }
+//     console.log("hello " + firstName + " " + lastName + " " + age + height);
+
+// // Objects
+
+// // making a date object
+// // Date is a class
+// // we make an instance of the class with the new keyword
+// // call the constructor with the new keyword
+// let now = new Date();
+// // use the . to access the properties or methods of the object
+// let hours = now.getHours();
+// console.log(hours);
+// let minutes = now.getMinutes();
+// console.log(minutes);
+
+//     //template
+//     class Person {
+//         constructor(firstName, lastName) {
+//             this.firstName = firstName;
+//             this.lastName = lastName;
+//         }
+
+//         sleep() {
+//             console.log(this.firstName + " is sleeping");
+//         }
+
+//     }
+
+//     let me = new Person("Nick", "Todd");
+//     let zack = new Person("Zack", "Todd");
+//     let alex = new Person("Alex", "Oliver");
+
+//     me.sleep();
+//     zack.sleep();
+//     alex.sleep();
+
+// class car {
+//     constructor(make, model, year) {
+//         this.make = make;
+//         this.model = model;
+//         this.year = year;
+//     }
+
+
+//     //methods of the class
+//     drive() {
+//         console.log("I am driving the " + this.make + " " + this.model);
+//     }
+
+// }
+
+//make a new object of the class
+// let car1 = new car("Toyota", "Camry", 2020);
+// let car2 = new car("Honda", "Civic", 2019);
+
+//accessing the properties of the object
+// console.log(" the first car is a " + car1.make + " " + car1.model);
+// console.log(" the second car is a " + car2.make + " " + car2.model);
+
+// car1.drive();
+// car2.drive();
+
+// class Person {
+//     constructor(firstName, lastName, age) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.age = age;
+//     }
+
+//     sleep(hours) {
+//         console.log(this.firstName + " has slept for " + hours + " hours");
+//     }
+// }
+
+
+// let person1 = new Person("James", "Mcgill", 50);
+// let person2 = new Person("Harry", "Potter", 21);
+
+// console.log("Hi, my name is " + person1.firstName + " " + person1.lastName + " and I am " + person1.age + " years old.");
+// console.log("Hi, my name is " + person2.firstName + " " + person2.lastName + " and I am " + person2.age + " years old.");
+
+// person1.sleep(8);
+// person2.sleep(10);
+
+//create a blank object
+let myObject = {};
+myObject.name = "Alex";
+myObject.age = 21;
+myObject.height = 1.7;
+myObject.weight = 75;
+myObject.wealth = 1000000;
+console.log(myObject);
+
+//create an object using Javascript Object Notation (JSON)
+let myObject2 = {
+    name: "Chair",
+    height: 170,
+    width: 50,
+    depth: 50,
 }
 
-console.log (i);
-let height = 1.4;
-console.log("hello " + firstName + " you are " + age + " years old and you are " + height + "m tall");
-
-// global scope - can see it everywhere
-// parameters and local variables are only in scope inside the function
-function sayHello(firstName="Nick", lastName="Todd")
-    // var is a locally scoped variable visible to the entire function, even if declared in
-    // a block such as a for loop
-    for (var i = 0; i < 5; i++) {
-        console.log(i);
-        var height = 1.4;
+let myObject3 = {
+    name: "Cat",
+    age: 13,
+    Hobbies: ["eating", 'sleeping'],
+    collar: {
+        color: "black",
+        type: "tabby",
+        length: 10,
     }
-    console.log("hello " + firstName + " " + lastName + " " + age + height);
+}
 
-// Objects
-
-// making a date object
-// Date is a class
-// we make an instance of the class with the new keyword
-// call the constructor with the new keyword
-let now = new Date();
-// use the . to access the properties or methods of the object
-let hours = now.getHours();
-console.log(hours);
-let minutes = now.getMinutes();
-console.log(minutes);
-
-    //template
-    class Person {
-        constructor(firstName, lastName) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-        }
-    
-        sleep() {
-            console.log(this.firstName + " is sleeping");
-        }
-    
-    }
-    
-    let me = new Person("Nick", "Todd");
-    let zack = new Person("Zack", "Todd");
-    let alex = new Person("Alex", "Oliver");
-    
-    me.sleep();
-    zack.sleep();
-    alex.sleep();
+console.log(myObject2);
+console.log(myObject3);
