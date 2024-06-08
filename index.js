@@ -300,3 +300,33 @@ let myObject3 = {
 
 console.log(myObject2);
 console.log(myObject3);
+
+//
+function Greeting(name) {
+    console.log("Goodmorning " + name);
+}
+function callGreeting(randomFunction, name) {
+    randomFunction(name);
+}
+
+callGreeting(Greeting, "Alex");
+
+
+
+//normal function-long version
+let someFunction = function (name) {
+    console.log("Goodmorning " + name);
+}
+
+
+//function written as a Lambda or arrow function-short version
+let someFunction2 = (name) => console.log("Goodmorning " + name);
+
+someFunction2("Alex");
+
+
+// //Handle the success,is basically a 'if' success
+// .then// is basically a 'if' failure
+
+//Handle the error
+// .catch
